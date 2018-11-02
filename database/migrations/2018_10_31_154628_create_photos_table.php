@@ -17,7 +17,7 @@ class CreatePhotosTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('artwork_id');
             $table->integer('order');
-            $table->string('path', 100);
+            $table->string('image', 100);
             $table->tinyInteger('status');
             $table->timestamps();
         });

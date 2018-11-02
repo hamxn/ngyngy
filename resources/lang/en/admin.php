@@ -100,4 +100,34 @@ return [
     ],
 
     'menu_titles' => [],
+
+    // Artworks
+    'artworks' => [
+        'artworks'      => 'Artworks',
+        'id'            => 'Id',
+        'name'          => 'Name',
+        'price'         => 'Price',
+        'size'          => 'Size',
+        'type'          => 'Type',
+        'status'        => 'Status',
+        'description'   => 'Description',
+        'created_at'    => 'Created at',
+        'updated_at'    => 'Updated at',
+    ],
+
+
+    // Photos
+    'photos' => [
+        'photos'        => 'Photos',
+        'id'            => 'Id',
+        'image'         => 'Image',
+        'order'         => 'Order',
+        'status'        => 'Status',
+        'created_at'    => 'Created at',
+        'updated_at'    => 'Updated at',
+    ],
+
+    // Contacts
+    'contacts' => [
+    ],
 ];
