@@ -94,6 +94,10 @@ class ArtworkController extends Controller
         $grid->created_at(__('admin.artworks.created_at'));
         $grid->updated_at(__('admin.artworks.updated_at'));
 
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
+
         return $grid;
     }
 
@@ -139,12 +143,12 @@ class ArtworkController extends Controller
         $form->currency('price', __('admin.artworks.price'))->symbol('$');
         $form->text('size', __('admin.artworks.size'));
         $form->select('type', __('admin.artworks.type'))->options(Artwork::listTextTypes());
-        $form->radio('status', __('admin.artworks.status'))->options(config('config.artworks.status'))->stacked();
+        $form->select('status', __('admin.artworks.status'))->options(config('config.artworks.status'));
         $form->textarea('description', __('admin.artworks.description'));
         $form->hasMany('photos', function (Form\NestedForm $form) {
             $form->image('image', __('admin.photos.image'));
-            $form->number('order', __('admin.photos.order'));
-            $form->radio('status', __('admin.photos.status'))->options(config('config.photos.status'))->stacked();
+            $form->text('order', __('admin.photos.order'));
+            $form->select('status', __('admin.photos.status'))->options(config('config.photos.status'));
         });
 
         $form->footer(function ($footer) {
