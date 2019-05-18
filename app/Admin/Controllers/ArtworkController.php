@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Artwork;
+use App\Models\Artwork;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -142,7 +142,7 @@ class ArtworkController extends Controller
         $form->text('name', __('admin.artworks.name'));
         $form->currency('price', __('admin.artworks.price'))->symbol('$');
         $form->text('size', __('admin.artworks.size'));
-        $form->select('type', __('admin.artworks.type'))->options(Artwork::listTextTypes());
+        $form->tags('tags', __('admin.artworks.tags'));
         $form->select('status', __('admin.artworks.status'))->options(config('config.artworks.status'));
         $form->textarea('description', __('admin.artworks.description'));
         $form->hasMany('photos', function (Form\NestedForm $form) {

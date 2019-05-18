@@ -42,7 +42,8 @@
                WORKS
                </a>
                <span><a href="http://ngyngyst.com/#" class="toggle" id="toggle_portfolio">desplegar</a></span>
-               <ul class="portfolio_cat " style="display:none">
+               {{-- <ul class="portfolio_cat " style="display:none"> --}}
+               <ul class="portfolio_cat ">
                   <li>
                      <a href="http://ngyngyst.com/portfolio/cat/1/personal-" class="ajax_ ">
                      Personal                     </a>

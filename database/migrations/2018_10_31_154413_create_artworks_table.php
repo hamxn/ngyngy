@@ -16,7 +16,7 @@ class CreateArtworksTable extends Migration
         Schema::create('artworks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
-            $table->tinyInteger('type');
+            $table->text('tags');
             $table->integer('price')->nullable();
             $table->string('size', 100)->nullable();
             $table->text('description')->nullable();

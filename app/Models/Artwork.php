@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,31 +25,12 @@ class Artwork extends Model
     }
 
     /**
-     * Get list text of artwork type
-     * @return array
-     */
-    public static function listTextTypes()
-    {
-    	return config('config.artworks.type');
-    }
-
-    /**
      * Get list text of artwork status
      * @return array
      */
     public static function listTextStatus()
     {
     	return config('config.artworks.status');
-    }
-
-    /**
-     * Get text of artwork type
-     * @param number $type 
-     * @return string
-     */
-    public static function textType($type) 
-    {
-    	return config('config.artworks.type.'.$type);
     }
 
     /**

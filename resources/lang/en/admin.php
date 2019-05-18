@@ -108,7 +108,7 @@ return [
         'name'          => 'Name',
         'price'         => 'Price',
         'size'          => 'Size',
-        'type'          => 'Type',
+        'tags'          => 'Tags',
         'status'        => 'Status',
         'description'   => 'Description',
         'created_at'    => 'Created at',
